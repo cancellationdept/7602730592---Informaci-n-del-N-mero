@@ -13,6 +13,47 @@
         content="Página informativa independiente. La información publicada no ha sido verificada oficialmente."
     >
 
+/* Galería de imágenes */
+.galeria {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.galeria h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+}
+
+.galeria figure {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(4, 9, 18, 0.72);
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.galeria figcaption {
+    margin-top: 10px;
+    color: #aab5c5;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
     <style>
         :root {
             color-scheme: dark;
@@ -365,6 +406,39 @@
                     Esto es una pagina web de verificación federal de números telefonicos..
                 </p>
             </aside>
+            
+<section class="galeria" aria-labelledby="galeria-titulo">
+    <h2 id="galeria-titulo">Galería de imágenes</h2>
+
+    <figure>
+        <img
+            src="images/departamento1-cuidado-proteccion-menor-california.png"
+            alt="Primer diseño gráfico">
+        <figcaption>Diseño gráfico 1</figcaption>
+    </figure>
+
+    <figure>
+        <img
+            src="images/departamento2-cuidado-proteccion-menor-california.png"
+            alt="Segundo diseño gráfico">
+        <figcaption>Diseño gráfico 2</figcaption>
+    </figure>
+
+    <figure>
+        <img
+            src="images/departamento3-cuidado-proteccion-menor-california.png"
+            alt="Fotografía de demostración">
+        <figcaption>Fotografía 3</figcaption>
+    </figure>
+
+    <figure>
+        <img
+            src="images/departamento4-cuidado-proteccion-menor-california.png"
+            alt="Imagen de una insignia">
+        <figcaption>Diseño gráfico 4</figcaption>
+    </figure>
+</section>
+
         </article>
 
         <footer class="footer">
